@@ -25,6 +25,7 @@ identifiers:
     cce@rhel7: 80293-4
 
 references:
+    cis: 2.2.6
     stigid@rhel6: "000256"
     srg@rhel6: SRG-OS-999999
     disa: "366"
