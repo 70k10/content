@@ -1,12 +1,22 @@
 documentation_complete: true
 
+prodtype: rhel6,rhel7,rhel8,ol7,ol8,rhv4
+
 title: 'Install the chrony service'
 
-description: 'The chrony service should be installed.'
+description: |-
+    {{{ describe_package_install(package="chrony") }}}
 
-rationale: 'Time synchronization (using NTP) is required by almost all network and administrative tasks (syslog, cryptographic based services (authentication, etc.), etc.).'
+rationale: |-
+    Time synchronization (using NTP) is required by almost all network and administrative tasks
+    (syslog, cryptographic based services (authentication, etc.), etc.).
 
 severity: high
+
+identifiers:
+    cce@rhel6: 82182-7
+    cce@rhel7: 82183-5
+    cce@rhel8: 82184-3
 
 references:
     anssi: NT012(R03)
@@ -20,6 +30,10 @@ references:
     iso27001-2013: A.12.4.1,A.12.4.2,A.12.4.3,A.12.4.4,A.12.7.1
     cis-csc: 1,14,15,16,3,5,6
     pcidss: Req-10.4
+
+ocil_clause: 'the package is not installed'
+
+ocil: '{{{ ocil_package(package="chrony") }}}'
 
 template:
     name: package_installed
